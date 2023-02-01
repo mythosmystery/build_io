@@ -1,6 +1,15 @@
 version: "3.8"
 
 services:
+  client:
+    container_name: client
+    build: 
+      dockerfile: ./Dockerfile
+    networks:
+      - pocketnet
+    ports:
+      - "5173:3000"
+
   pocketbase:
     container_name: pocketbase
     build: 
@@ -10,7 +19,7 @@ services:
     volumes:
       - ./pb_data:/pb/pb_data
     ports:
-      - "8080:8080"
+      - "8090:8080"
 
 networks:
   pocketnet:
