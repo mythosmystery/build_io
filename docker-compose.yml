@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  pocketbase:
+    container_name: pocketbase
+    build: 
+      dockerfile: ./pocketbase/Dockerfile
+    networks:
+      - pocketnet
+    volumes:
+      - ./pb_data:/pb/pb_data
+    ports:
+      - "8080:8080"
+
+networks:
+  pocketnet:
+    driver: bridge
