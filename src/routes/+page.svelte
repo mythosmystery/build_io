@@ -55,4 +55,21 @@
 	class="w-full h-96 object-cover mx-auto mt-8"
 />
 
+<p class="text-lg mx-auto w-1/2 my-24">
+	Personalized Service and Your Choice of Operating System - Only at [Company Name] At [Company
+	Name], we understand that every individual has unique requirements when it comes to their
+	computer. That's why our custom gaming and workstation PCs are not just powerful machines, but
+	also tailored to your exact needs and preferences. Our team of experts will work with you every
+	step of the way to ensure that your PC is built just the way you want it. From the latest hardware
+	components to the color of your cables, we'll make sure that your custom PC is a true reflection
+	of your personality and style. And, unlike other computer building companies, we offer a choice of
+	operating system - Windows or a custom Linux distribution. Whether you're a Windows power user, a
+	Linux aficionado, or somewhere in between, we've got you covered. Our custom Linux distribution is
+	designed to offer the perfect balance of power, security, and ease of use. So, if you're looking
+	for a personalized and hassle-free computer building experience, look no further than [Company
+	Name]. Our team of experts will work with you to create a custom gaming or workstation PC that
+	meets your exact requirements, and our friendly customer support will be here to help you every
+	step of the way.
+</p>
+
 <Footer />
