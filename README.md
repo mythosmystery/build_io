@@ -5,5 +5,3 @@
 ## Cool guys
 
 ## Nice
-
-cool
