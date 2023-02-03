@@ -9,7 +9,9 @@
 
 <img src="ram.jpeg" alt="ram" class="w-full h-96 object-cover mx-auto mt-8" />
 
-<p class="w-1/2 mx-auto my-24 text-lg">
+<h2 class="text-4xl font-thin text-teal-600 mt-12 text-center">Custom PCs Built for You</h2>
+
+<p class="w-1/2 mx-auto mt-12 mb-24 text-lg">
 	At [Company Name], we understand that your computer is the gateway to your passion, whether it's
 	gaming, creativity or productivity. That's why we've created custom gaming PCs and workstation PCs
 	that are not only powerful, but also reflect your unique style and needs. Located in Tucson,
@@ -33,7 +35,9 @@
 
 <img src="/back-of-case.jpeg" alt="back of case" class="w-full h-96 object-cover mx-auto mt-8" />
 
-<p class="w-1/2 mx-auto my-24 text-lg">
+<h2 class="text-4xl font-thin text-teal-600 mt-12 text-center">Cutting Edge Power</h2>
+
+<p class="w-1/2 mx-auto mt-12 mb-24 text-lg">
 	Experience Cutting Edge Power with Our Custom Built Gaming and Workstation PCs At [Company Name],
 	we pride ourselves on using only the latest and greatest technology to build our custom gaming and
 	workstation PCs. Our team of experts handpicks the finest components from the leading
@@ -55,7 +59,9 @@
 	class="w-full h-96 object-cover mx-auto mt-8"
 />
 
-<p class="text-lg mx-auto w-1/2 my-24">
+<h2 class="text-4xl font-thin text-teal-600 mt-12 text-center">Choose Your Fighter</h2>
+
+<p class="text-lg mx-auto w-1/2 mt-12 mb-24">
 	Personalized Service and Your Choice of Operating System - Only at [Company Name] At [Company
 	Name], we understand that every individual has unique requirements when it comes to their
 	computer. That's why our custom gaming and workstation PCs are not just powerful machines, but
