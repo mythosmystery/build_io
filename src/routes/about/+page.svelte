@@ -1,5 +1,5 @@
-<div class="flex justify-between gap-8 items-center">
-	<img src="soldering.jpeg" alt="soldering" class="w-2/5 ml-12 mt-20 h-3/4 object-cover" />
+<div class="flex flex-col md:flex-row justify-between gap-8 items-center">
+	<img src="soldering.jpeg" alt="soldering" class="md:w-2/5 md:ml-12 md:mt-20 h-3/4 object-cover" />
 
 	<div>
 		<h1 class="text-4xl font-thin text-teal-600 mt-8 text-center">About Us</h1>

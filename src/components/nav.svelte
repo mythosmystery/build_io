@@ -8,9 +8,9 @@
 	}));
 </script>
 
-<nav class="flex flex-row p-6 top-0 sticky justify-between">
+<nav class="flex flex-row py-6 px-1 sm:px-4 lg:px-10 top-0 sticky justify-between items-center">
 	<a class="text-2xl text-teal-500 font-thin" href="/">Buildy Boys</a>
-	<div class="flex flex-row gap-10 p-2">
+	<div class="flex flex-row gap-4 sm:gap-10">
 		{#each links as link}
 			<a
 				class={`text-xl text-teal-500 capitalize ${
