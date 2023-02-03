@@ -3,7 +3,7 @@
 </script>
 
 <h1 class="text-5xl text-center font-thin text-teal-700 mt-24">We make computers.</h1>
-<h4 class="text-xl text-center text-teal-800 mt-6 mb-48">
+<h4 class="text-xl text-center text-teal-800 mt-6 mb-32">
 	Unleash Your Gaming and Work Potential with Custom PCs Built in Tucson, Arizona!
 </h4>
 
@@ -59,7 +59,13 @@
 	class="w-full h-96 object-cover mx-auto mt-8"
 />
 
-<h2 class="text-4xl font-thin text-teal-600 mt-12 text-center">Choose Your Fighter</h2>
+<h2 class="text-4xl font-thin text-teal-600 mt-24 mb-2 text-center">Choose Your Fighter</h2>
+<p class="text-center text-lg mb-20">Windows vs Linux</p>
+
+<div class="flex p-6 gap-6">
+	<img src="/windows.jpeg" alt="windows" class="w-full h-96 object-cover mx-auto" />
+	<img src="/linux.webp" alt="linux" class="w-full h-96 object-cover mx-auto" />
+</div>
 
 <p class="text-lg mx-auto w-1/2 mt-12 mb-24">
 	Personalized Service and Your Choice of Operating System - Only at [Company Name] At [Company
