@@ -2,4 +2,3 @@
 
 # A website
 
-## Cool guys
