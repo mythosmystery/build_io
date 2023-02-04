@@ -1,13 +1,19 @@
-import PocketBase, { Record, Admin } from 'pocketbase'
+import PocketBase from 'pocketbase'
+import type { Record, Admin } from 'pocketbase'
 import { writable } from 'svelte/store'
 
 export class State {
-	pb: PocketBase
+	pb: PocketBase | null = null
 	auth: Record | Admin | null = null
+	loggedIn = false
 
-	constructor() {
-		this.pb = new PocketBase('http://pocketbase:8080')
-		this.auth = this.pb.authStore.model
+	async init() {
+		const res = await fetch('/api/pb')
+		const { url, authStore } = await res.json()
+		this.pb = new PocketBase(url, authStore)
+		this.auth = authStore.model || authStore.baseModel || this.pb.authStore.model
+		this.loggedIn = !!this.auth?.id
+		console.log(this)
 	}
 }
 
