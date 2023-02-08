@@ -1,20 +1,23 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import {state} from '../utils/state';
 
-	$: links = ['home', 'about', 'shop'].map((link) => ({
+	export let loggedIn: boolean
+
+	let links = ['home', 'about', 'shop'].map((link) => ({
 		href: `/${link === 'home' ? '' : link}`,
 		text: link,
 		active: `/${link}` === $page.url.pathname
 	}));
 
-	$: $state.loggedIn
-
 	async function logout() {
-		await fetch('/api/pb', {
-			method: 'POST'
-		})
-		$state.loggedIn = false
+		try {
+			await fetch('/logout', {
+				method: 'POST'
+			})
+			loggedIn = false
+		} catch (error) {
+			console.error(error)
+		}
 	}
 </script>
 
@@ -29,7 +32,7 @@
 				href={link.href}>{link.text}</a
 			>
 		{/each}
-		{#if $state.loggedIn}
+		{#if loggedIn}
 			<button class='text-xl text-teal-500 capitalize underline-offset-8' on:click={logout}>Logout</button>
 		{:else}
 			<a class='text-xl text-teal-500 capitalize underline-offset-8' href='/login'>Login</a>

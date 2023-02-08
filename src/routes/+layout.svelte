@@ -1,16 +1,15 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
 	import '../app.css';
 	import Nav from '../components/nav.svelte';
-	import {state} from '../utils/state';
+	import type { LayoutData } from './$types'
 
-	onMount(async () => {
-		await $state.init()
-	})
+	export let data: LayoutData
+
+	let loggedIn = !!data.user?.name
 </script>
 
 <svelte:head>
 	<title>Buildy Boys</title>
 </svelte:head>
-<Nav />
+<Nav {loggedIn} />
 <slot />

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { state } from '../../utils/state';
   import type {ActionData} from './$types'
 
   export let form: ActionData

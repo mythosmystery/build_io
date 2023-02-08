@@ -1,9 +1,8 @@
-import { env } from '$env/dynamic/private'
 import type { Handle } from '@sveltejs/kit'
 import PocketBase from 'pocketbase'
 
 export const handle: Handle = async ({ event, resolve }) => {
-	event.locals.pb = new PocketBase(env.PB_URL || 'http://localhost:8090')
+	event.locals.pb = new PocketBase('https://pb.mythosmystery.ga')
 
 	// load the store data from the request cookie string
 	event.locals.pb.authStore.loadFromCookie(event.request.headers.get('cookie') || '')
@@ -15,7 +14,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 		// clear the auth store on failed refresh
 		event.locals.pb.authStore.clear()
 	}
-
+	
+	event.locals.user = event.locals.pb.authStore.model
+	
 	const response = await resolve(event)
 
 	// send back the default 'pb_auth' cookie to the client with the latest store state

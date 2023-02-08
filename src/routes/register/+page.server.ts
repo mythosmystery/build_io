@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit'
-import { fromFormData } from '../../utils/types'
+import { fromFormData } from '$lib'
 import type { Actions } from './$types'
 
 type Register = {

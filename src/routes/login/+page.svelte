@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ActionData } from './$types'
+	import PocketBase from 'pocketbase'
 
 	export let form: ActionData
 </script>
