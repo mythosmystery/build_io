@@ -3,10 +3,10 @@
 
 	export let loggedIn: boolean
 
-	let links = ['home', 'about', 'shop'].map((link) => ({
+	$: links = ['home', 'about', 'shop'].map((link) => ({
 		href: `/${link === 'home' ? '' : link}`,
 		text: link,
-		active: `/${link}` === $page.url.pathname
+		active: (`/${link}` === $page.url.pathname) || (link === 'home' && $page.url.pathname === '/')
 	}));
 
 	async function logout() {
