@@ -11,6 +11,8 @@ services:
       - "5173:3000"
     depends_on:
       - pocketbase
+    environment:
+      - PB_URL=http://pocketbase:8080
 
   pocketbase:
     container_name: pocketbase
