@@ -13,4 +13,4 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.DEPLOY_USER }}
         password: ${{ secrets.DEPLOY_PWD }} 
-        script: whoami
+        script: ls
