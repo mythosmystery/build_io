@@ -1,10 +1,10 @@
 FROM node:18.9.1-bullseye-slim as builder
 
-RUN npx playwright install
-
 COPY ./package.json ./package.json
 
 RUN yarn
+
+RUN npx playwright install
 
 COPY . .
 
