@@ -2,7 +2,7 @@
 	<img src="soldering.jpeg" alt="soldering" class="md:w-2/5 md:ml-12 md:mt-20 h-3/4 object-cover" />
 
 	<div>
-		<h1 class="text-4xl font-thin text-teal-600 mt-8 text-center">About Us</h1>
+		<h1 class="text-4xl font-thin text-primary-light mt-8 text-center">About Us</h1>
 		<p class="mx-12 my-12">
 			Your One-Stop Shop for Custom Gaming and Workstation PCs At [Company Name], we believe that
 			your computer should be a reflection of your unique needs and style. That's why we offer a

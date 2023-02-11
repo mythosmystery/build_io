@@ -12,7 +12,7 @@
 		type="text"
 		name="username"
 		placeholder="Email/Username"
-		class="p-4 rounded-md mb-2 focus:outline-teal-500"
+		class="p-4 rounded-md mb-2 focus:outline-secondary-light bg-gray-100"
 	/>
 
 	{#if form?.error}
@@ -23,17 +23,17 @@
 		type="password"
 		name="password"
 		placeholder="Password"
-		class="p-4 rounded-md mb-2 focus:outline-teal-500"
+		class="p-4 rounded-md mb-2 focus:outline-secondary-light bg-gray-100"
 	/>
 
 	<button
 		type="submit"
-		class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"
+		class="bg-secondary hover:bg-secondary-dark text-white font-bold py-2 px-4 rounded"
 	>
 		Login
 	</button>
 	<p class="mt-1">
 		Don't have an account?
-		<a href="/register" class="italic text-teal-500 hover:text-teal-700">Register</a>
+		<a href="/register" class="italic text-primary hover:text-primary-light">Register</a>
 	</p>
 </form>
