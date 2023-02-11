@@ -12,4 +12,9 @@ jobs:
 
     steps:
       -name: Connect to the server
-      run: ssh ${{DEPLOY_USER}}:${{DEPLOY_PWD}}@deploy.mythosmystery.ga && touch hi.txt
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.DEPLOY_USER }}
+        password: ${{ secrets.DEPLOY_PWD }} 
+        script: whoami
