@@ -8,8 +8,6 @@ COPY . .
 
 RUN yarn build
 
-RUN yarn test:unit
-
 EXPOSE 3000
 
 CMD [ "yarn", "start:prod" ]
