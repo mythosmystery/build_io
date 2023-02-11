@@ -5,14 +5,10 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   deploy:
-
     runs-on: self-hosted
-
     steps:
-      - name: Connect to the server
-      uses: appleboy/ssh-action@v0.1.7
+      - uses: appleboy/ssh-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.DEPLOY_USER }}
