@@ -1,3 +1,4 @@
+import type { Address } from './address.model'
 import type { Order } from './order.model'
 
 export interface User {
@@ -14,5 +15,6 @@ export interface User {
     expand?: {
         pastOrders?: Order[]
         activeOrder?: Order
+        addresses?: Address[]
     }
 }
