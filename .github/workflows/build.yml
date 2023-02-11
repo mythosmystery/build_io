@@ -48,9 +48,7 @@ jobs:
             with:
               node-version: '16.x'
               cache: 'yarn'
-          - name: Install deps
           - run: yarn
-          - name: Install Playwright
           - run: npx playwright install --with-deps
           - run: yarn test
 
