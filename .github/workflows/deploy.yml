@@ -1,0 +1,15 @@
+name: Deploy
+
+on:
+  push: 
+    branches: [ "main" ]
+
+jobs:
+
+  deploy:
+
+    runs-on: self-hosted
+
+    steps:
+      -name: Connect to the server
+      run: ssh ${{DEPLOY_USER}}:${{DEPLOY_PWD}}@deploy.mythosmystery.ga && touch hi.txt
