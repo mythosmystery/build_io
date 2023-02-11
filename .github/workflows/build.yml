@@ -11,7 +11,7 @@ jobs:
 
   check-pocketbase:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Ping pocketbase server
