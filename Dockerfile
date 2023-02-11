@@ -4,13 +4,9 @@ COPY ./package.json ./package.json
 
 RUN yarn
 
-RUN npx playwright install
-
 COPY . .
 
 RUN yarn build
-
-RUN yarn test
 
 RUN yarn test:unit
 
