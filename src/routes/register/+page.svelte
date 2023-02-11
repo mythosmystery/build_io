@@ -11,38 +11,39 @@
 		type="text"
     name="name"
 		placeholder="Name"
-		class="p-4 rounded-md mb-2 focus:outline-teal-500 bg-gray-100"
+		class="p-4 rounded-md mb-2 focus:outline-secondary-light bg-gray-100"
 	/>
 	<input
 		type="text"
     name="username"
 		placeholder="Username"
-		class="p-4 rounded-md mb-2 focus:outline-teal-500 bg-gray-100"
+		class="p-4 rounded-md mb-2 focus:outline-secondary-light bg-gray-100"
 	/>
 	<input
 		type="text"
     name="email"
 		placeholder="Email"
-		class="p-4 rounded-md mb-2 focus:outline-teal-500 bg-gray-100"
+		class="p-4 rounded-md mb-2 focus:outline-secondary-light bg-gray-100"
 	/>
 	<input
 		type="password"
     name="password"
 		placeholder="Password"
-		class="p-4 rounded-md mb-2 focus:outline-teal-500 bg-gray-100 mt-4"
+		class="p-4 rounded-md mb-2 focus:outline-secondary-light bg-gray-100 mt-4"
 	/>
   <input
     type="password"
     name="passwordConfirm"
     placeholder="Confirm Password"
-    class="p-4 rounded-md mb-2 focus:outline-teal-500 bg-gray-100"
+    class="p-4 rounded-md mb-2 focus:outline-secondary-light bg-gray-100"
   />
 	<button
     type="submit"
-		class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"
+		class="bg-secondary hover:bg-secondary-dark text-white font-bold py-2 px-4 rounded"
 	>
 		Register
 	</button>
+	<p>Already have an account? <a href='/login' class="text-primary hover:text-primary-light">Login</a></p>
   {#if form?.error}
     <p class="text-red-500">{form.error}</p>
   {/if}

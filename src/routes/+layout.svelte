@@ -11,5 +11,5 @@
 <svelte:head>
 	<title>Buildy Boys</title>
 </svelte:head>
-<Nav {loggedIn} />
+<Nav {loggedIn} userName={data.user?.name} />
 <slot />

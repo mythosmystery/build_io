@@ -2,14 +2,14 @@
 	import Footer from '../components/footer.svelte';
 </script>
 
-<h1 class="text-5xl text-center font-thin text-teal-700 mt-24">We make computers.</h1>
-<h4 class="text-xl text-center text-teal-800 mt-6 mb-32">
+<h1 class="text-5xl text-center font-thin text-primary-light mt-24">We make computers.</h1>
+<h4 class="text-xl text-center text-primary-dark mt-6 mb-32">
 	Unleash Your Gaming and Work Potential with Custom PCs Built in Tucson, Arizona!
 </h4>
 
 <img src="ram.jpeg" alt="ram" class="w-full h-96 object-cover mx-auto mt-8" />
 
-<h2 class="text-4xl font-thin text-teal-600 mt-12 text-center">Custom PCs Built for You</h2>
+<h2 class="text-4xl font-thin text-primary-light mt-12 text-center">Custom PCs Built for You</h2>
 
 <p class="px-12 lg:w-1/2 mx-auto mt-12 mb-24 text-lg">
 	At [Company Name], we understand that your computer is the gateway to your passion, whether it's
@@ -28,14 +28,14 @@
 
 <div class="w-full flex justify-center">
 	<a
-		class="py-3 px-6 rounded-xl border-teal-500 border-2 text-teal-500 hover:bg-teal-500 hover:text-white"
+		class="py-3 px-6 rounded-xl border-primary border-2 text-primary hover:bg-primary hover:text-white"
 		href="/shop">Shop</a
 	>
 </div>
 
 <img src="/back-of-case.jpeg" alt="back of case" class="w-full h-96 object-cover mx-auto mt-8" />
 
-<h2 class="text-4xl font-thin text-teal-600 mt-12 text-center">Cutting Edge Power</h2>
+<h2 class="text-4xl font-thin text-primary mt-12 text-center">Cutting Edge Power</h2>
 
 <p class="px-12 lg:w-1/2 mx-auto mt-12 mb-24 text-lg">
 	Experience Cutting Edge Power with Our Custom Built Gaming and Workstation PCs At [Company Name],
@@ -59,7 +59,7 @@
 	class="w-full h-96 object-cover mx-auto mt-8"
 />
 
-<h2 class="text-4xl font-thin text-teal-600 mt-24 mb-2 text-center">Choose Your Fighter</h2>
+<h2 class="text-4xl font-thin text-primary mt-24 mb-2 text-center">Choose Your Fighter</h2>
 <p class="text-center text-lg mb-20">Windows vs Linux</p>
 
 <div class="flex flex-col lg:flex-row py-6 lg:p-6 gap-6">
