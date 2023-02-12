@@ -11,7 +11,7 @@ type Register = {
 	passwordConfirm: string
 }
 
-export const actions: Actions = {
+export const actions = {
 	default: async ({ request, locals: { pb } }) => {
 		const r: Register = await fromFormData(request)
 		try {
@@ -22,6 +22,6 @@ export const actions: Actions = {
 		}
 		throw redirect(302, '/login')
 	}
-}
+} satisfies Actions
 
 

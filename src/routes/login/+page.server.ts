@@ -7,7 +7,7 @@ type Login = {
 	password: string
 }
 
-export const actions: Actions = {
+export const actions = {
 	default: async ({ request, locals: { pb } }) => {
 		const { password, username }: Login = await fromFormData(request)
 		try {
@@ -17,4 +17,4 @@ export const actions: Actions = {
 		}
 		throw redirect(302, '/')
 	}
-}
+} satisfies Actions
