@@ -2,12 +2,13 @@
 // for information about these interfaces
 // and what to do when importing types
 import PocketBase, { Admin, Record } from "pocketbase";
+import type { User } from './lib/models/user.model';
 
 declare global {
     declare namespace App {
         interface Locals {
             pb: PocketBase
-            user: Record | Admin | null
+            user: User | null
         }
     }
 }

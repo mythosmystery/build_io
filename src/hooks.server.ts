@@ -1,5 +1,6 @@
 import type { Handle } from '@sveltejs/kit'
 import PocketBase from 'pocketbase'
+import type { User } from './lib/models/user.model'
 
 export const handle: Handle = async ({ event, resolve }) => {
 	event.locals.pb = new PocketBase('https://pb.mythosmystery.ga')
@@ -10,7 +11,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	try {
 		// get an up-to-date auth store state by verifying and refreshing the loaded auth model (if any)
 		event.locals.pb.authStore.isValid && (await event.locals.pb.collection('users').authRefresh())
-		event.locals.user = event.locals.pb.authStore.model
+		event.locals.user = event.locals.pb.authStore.model as User | null
 	} catch (_) {
 		// clear the auth store on failed refresh
 		event.locals.pb.authStore.clear()

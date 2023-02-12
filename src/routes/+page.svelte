@@ -3,7 +3,7 @@
 </script>
 
 <h1 class="text-5xl text-center font-thin text-primary-light mt-24">We make computers.</h1>
-<h4 class="text-xl text-center text-primary-dark mt-6 mb-32">
+<h4 class="text-xl text-center text-primary-dark dark:text-white mt-6 mb-32">
 	Unleash Your Gaming and Work Potential with Custom PCs Built in Tucson, Arizona!
 </h4>
 
@@ -11,7 +11,7 @@
 
 <h2 class="text-4xl font-thin text-primary-light mt-12 text-center">Custom PCs Built for You</h2>
 
-<p class="px-12 lg:w-1/2 mx-auto mt-12 mb-24 text-lg">
+<p class="px-12 lg:w-1/2 mx-auto mt-12 mb-24 text-lg dark:text-white">
 	At [Company Name], we understand that your computer is the gateway to your passion, whether it's
 	gaming, creativity or productivity. That's why we've created custom gaming PCs and workstation PCs
 	that are not only powerful, but also reflect your unique style and needs. Located in Tucson,
@@ -37,7 +37,7 @@
 
 <h2 class="text-4xl font-thin text-primary mt-12 text-center">Cutting Edge Power</h2>
 
-<p class="px-12 lg:w-1/2 mx-auto mt-12 mb-24 text-lg">
+<p class="px-12 lg:w-1/2 mx-auto mt-12 mb-24 text-lg dark:text-white">
 	Experience Cutting Edge Power with Our Custom Built Gaming and Workstation PCs At [Company Name],
 	we pride ourselves on using only the latest and greatest technology to build our custom gaming and
 	workstation PCs. Our team of experts handpicks the finest components from the leading
@@ -60,14 +60,14 @@
 />
 
 <h2 class="text-4xl font-thin text-primary mt-24 mb-2 text-center">Choose Your Fighter</h2>
-<p class="text-center text-lg mb-20">Windows vs Linux</p>
+<p class="text-center text-lg mb-20 dark:text-white">Windows vs Linux</p>
 
 <div class="flex flex-col lg:flex-row py-6 lg:p-6 gap-6">
 	<img src="/windows.jpeg" alt="windows" class="w-full h-96 object-cover mx-auto" />
 	<img src="/linux.webp" alt="linux" class="w-full h-96 object-cover mx-auto" />
 </div>
 
-<p class="text-lg mx-auto px-12 lg:w-1/2 mt-12 mb-24">
+<p class="text-lg mx-auto px-12 lg:w-1/2 mt-12 mb-24 dark:text-white">
 	Personalized Service and Your Choice of Operating System - Only at [Company Name] At [Company
 	Name], we understand that every individual has unique requirements when it comes to their
 	computer. That's why our custom gaming and workstation PCs are not just powerful machines, but
