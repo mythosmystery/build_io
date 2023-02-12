@@ -24,7 +24,7 @@
 						currency: 'USD'
 					})}
 				</p>
-				<button class="hover:text-primary-light text-primary">
+				<button class="hover:text-primary-light text-primary" title="Add to cart">
 					<Icon
 						icon="mdi:cart-plus"
 						class="w-8 h-8 mt-4 hover:scale-110 active:scale-90 transition-all ease-in"

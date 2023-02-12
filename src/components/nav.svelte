@@ -40,6 +40,7 @@
 >
 	<div class="flex gap-4 items-center">
 		<button
+			title="Toggle dark mode"
 			on:click={() => {
 				$state.darkMode = !$state.darkMode
 			}}
