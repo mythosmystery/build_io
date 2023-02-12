@@ -25,7 +25,10 @@
 
 <Notifications>
 	<!-- <div class="dark:bg-slate-700 min-h-screen"> -->
-	<div class={$state.darkMode ? 'dark bg-slate-700 min-h-screen' : null}>
+	<div
+		class={'transition-all ease-in-out ' +
+			($state.darkMode ? 'dark bg-slate-700 min-h-screen' : '')}
+	>
 		{#if loggedIn && !verified && !$state.hideBanner}
 			<div
 				class={'h-14 flex justify-end items-center gap-2 ' +
