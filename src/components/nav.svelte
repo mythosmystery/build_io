@@ -62,7 +62,7 @@
 			>
 		{/each}
 		{#if loggedIn}
-			<button class="text-xl text-primary capitalize underline-offset-8" on:click={logout}
+			<button class="text-xl text-primary dark:text-secondary-light dark:hover:text-secondary capitalize underline-offset-8" on:click={logout}
 				>Logout</button
 			>
 		{:else}

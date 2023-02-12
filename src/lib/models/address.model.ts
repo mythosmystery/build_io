@@ -5,4 +5,5 @@ export interface Address {
     zip: number
     streetTwo?: string
     notes?: string
+    nickname?: string
 }

@@ -3,6 +3,7 @@
 	import Nav from '../components/nav.svelte'
 	import type { LayoutData } from './$types'
 	import { state } from '$lib'
+	import Notifications from 'svelte-notifications'
 
 	export let data: LayoutData
 
@@ -22,27 +23,39 @@
 	<title>Buildy Boys</title>
 </svelte:head>
 
-<!-- <div class="dark:bg-slate-700 min-h-screen"> -->
-<div class={$state.darkMode ? 'dark bg-slate-700 min-h-screen' : null}>
-	{#if !verified && !$state.hideBanner}
-		<div
-			class={'h-14 flex justify-end items-center gap-2 ' +
-				($state.verificationSent ? 'bg-green-100' : 'bg-red-100')}
-		>
-			<p class="text-primary-dark text-xl">
-				{$state.verificationSent ? 'Verification email sent.' : 'Your email is not verified yet.'}
-			</p>
-			<button on:click={sendVerificationEmail} class="text-xl text-primary hover:text-primary-light"
-				>Resend verification email</button
+<Notifications>
+	<!-- <div class="dark:bg-slate-700 min-h-screen"> -->
+	<div class={$state.darkMode ? 'dark bg-slate-700 min-h-screen' : null}>
+		{#if !verified && !$state.hideBanner}
+			<div
+				class={'h-14 flex justify-end items-center gap-2 ' +
+					($state.verificationSent
+						? 'bg-green-100 dark:bg-green-400/20'
+						: 'bg-red-100 dark:bg-red-500/20')}
 			>
-			<button
-				on:click={() => ($state.hideBanner = true)}
-				class="text-xl text-primary hover:text-primary-light text-right px-6">X</button
-			>
-		</div>
-	{/if}
+				<div class="flex flex-col sm:flex-row">
+					<p class="text-primary-dark dark:text-white text-xl mr-2">
+						{$state.verificationSent
+							? 'Verification email sent.'
+							: 'Your email is not verified yet.'}
+					</p>
+					<button
+						on:click={sendVerificationEmail}
+						class="text-xl text-primary dark:text-primary-light dark:hover:text-secondary-light hover:text-primary-light"
+						>Resend verification email</button
+					>
+				</div>
+				<div class="w-1/4" />
+				<button
+					on:click={() => ($state.hideBanner = true)}
+					class="text-xl text-primary dark:text-primary-light dark:hover:text-primary hover:text-primary-light text-right px-6"
+					>X</button
+				>
+			</div>
+		{/if}
 
-	<Nav {loggedIn} userName={data.user?.name} />
+		<Nav {loggedIn} userName={data.user?.name} />
 
-	<slot />
-</div>
+		<slot />
+	</div>
+</Notifications>
