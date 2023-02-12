@@ -12,7 +12,7 @@
 		type="text"
 		name="username"
 		placeholder="Email/Username"
-		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800"
+		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white"
 	/>
 
 	{#if form?.error}
@@ -23,7 +23,7 @@
 		type="password"
 		name="password"
 		placeholder="Password"
-		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800"
+		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white"
 	/>
 
 	<button
@@ -34,6 +34,10 @@
 	</button>
 	<p class="mt-1 dark:text-white">
 		Don't have an account?
-		<a href="/register" class="italic text-primary dark:text-primary-light hover:text-primary-light dark:hover:text-primary">Register</a>
+		<a
+			href="/register"
+			class="italic text-primary dark:text-primary-light hover:text-primary-light dark:hover:text-primary"
+			>Register</a
+		>
 	</p>
 </form>

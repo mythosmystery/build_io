@@ -26,14 +26,11 @@
 	}))
 
 	async function logout() {
-		try {
-			await fetch('/logout', {
-				method: 'POST'
-			})
-			loggedIn = false
-			userName = undefined
-		} catch (error) {
-			console.error(error)
+		await fetch('/logout', {
+			method: 'POST'
+		})
+		if (typeof window !== 'undefined') {
+			window.location.href = '/'
 		}
 	}
 </script>
