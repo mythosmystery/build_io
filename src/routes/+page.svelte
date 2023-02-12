@@ -1,5 +1,5 @@
 <script>
-	import Footer from '../components/footer.svelte';
+	import Footer from '../components/footer.svelte'
 </script>
 
 <h1 class="text-5xl text-center font-thin text-primary-light mt-24">We make computers.</h1>
@@ -28,7 +28,7 @@
 
 <div class="w-full flex justify-center">
 	<a
-		class="py-3 px-6 rounded-xl border-primary border-2 text-primary hover:bg-primary hover:text-white"
+		class="py-3 px-6 rounded-xl border-primary border-2 shadow-md text-primary hover:scale-110 hover:shadow-lg active:shadow-sm active:scale-90 transition-all ease-in-out hover:bg-primary hover:text-white"
 		href="/shop">Shop</a
 	>
 </div>

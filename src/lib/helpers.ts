@@ -5,5 +5,5 @@ export function formatPhone(phone: string | undefined) {
 }
 
 export function notImplementedNotification(addNotification: addNotification) {
-    addNotification({position: 'bottom-right', text: 'Not implemented yet', type: 'error'})
+    addNotification({position: 'bottom-right', text: 'Not implemented yet', type: 'error', removeAfter: 2000})
 }

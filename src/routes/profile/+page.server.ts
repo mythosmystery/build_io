@@ -1,13 +1,19 @@
-import { serialize } from '../../lib';
-import type { Address } from '../../lib/models/address.model';
+import { serialize } from '$lib';
+import type { User } from '$lib/models/user.model';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({locals: {user, pb}}) => {
     if(user?.addresses?.length) {
-        const promises = user.addresses.map(a => pb.collection('addresses').getOne<Address>(a))
-        const addresses = await Promise.all(promises)
-        return {
-            addresses: serialize(addresses)
+        try {
+            const expandedUser = await pb.collection('users').getOne<User>(user.id, {expand: 'addresses'})
+            return {
+                user: serialize(expandedUser)
+            }
+        } catch(e: any) {
+            console.error(e)
+            return {
+                error: e?.message
+            }
         }
     }
 }
