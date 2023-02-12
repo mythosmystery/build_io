@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>Buildy Boys</title>
+	<title>Buildy Boys - Your Dream PC Awaits!</title>
 </svelte:head>
 
 <Notifications>

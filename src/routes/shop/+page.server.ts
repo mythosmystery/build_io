@@ -1,6 +1,7 @@
 import type { Product } from '$lib/models/product.model';
 import { serialize } from '$lib';
 import type { PageServerLoad } from './$types';
+import { redirect } from '@sveltejs/kit';
 
 export const load: PageServerLoad = async ({ locals: {pb}}) => {
     try {
@@ -10,9 +11,6 @@ export const load: PageServerLoad = async ({ locals: {pb}}) => {
     }
     } catch(e: any) {
         console.error(e)
-        return {
-            products: [],
-            error: e?.message
-        }
+        throw redirect(301, '/')
     }
 }
