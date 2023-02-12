@@ -20,19 +20,19 @@
 		<p class="text-xl italic">{data.user?.name} ({data.user?.username})</p>
 		<p class="text-lg italic">{data.user?.email}</p>
 		<p class="italic">{formatPhone(data.user?.phone)}</p>
-		{#if !data.addresses?.length}
+		{#if !data.user?.expand?.addresses?.length}
 			<p class="text-xl italic">No addresses</p>
 		{:else}
 			<div class="flex justify-between items-center">
 				<ul class="mt-4 border-r pr-8">
-					{#each data.addresses as address}
+					{#each data.user?.expand?.addresses as address}
 						<li class="text-lg italic">{address.nickname}</li>
 						<li>{address.street},</li>
 						<li>{address.city},</li>
 						<li>{address.state}, {address.zip}</li>
 					{/each}
 				</ul>
-				{#if data.addresses.length > 1}
+				{#if data.user.addresses.length > 1}
 					<button
 						on:click={() => notImplementedNotification(addNotification)}
 						class="text-red-400 m-4 hover:text-red-600"
