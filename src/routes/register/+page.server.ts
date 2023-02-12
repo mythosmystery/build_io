@@ -8,6 +8,7 @@ type Register = {
 	username: string
 	email: string
 	password: string
+	passwordConfirm: string
 }
 
 export const actions: Actions = {
@@ -15,9 +16,12 @@ export const actions: Actions = {
 		const r: Register = await fromFormData(request)
 		try {
 			await pb.collection('users').create<User>(r)
+			await pb.collection('users').requestVerification(r.email)
 		} catch (e: any) {
 			return { error: e.message }
 		}
 		throw redirect(302, '/login')
 	}
 }
+
+

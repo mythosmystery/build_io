@@ -6,12 +6,15 @@ export interface User {
     name: string
     username: string
     email: string
+    phone: string
     password: string
     stripeId?: string
+    verified: boolean
     pastOrders: string[]
     activeOrder?: string
     created: Date
     updated: Date
+    addresses: string[]
     expand?: {
         pastOrders?: Order[]
         activeOrder?: Order

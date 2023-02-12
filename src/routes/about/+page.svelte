@@ -3,7 +3,7 @@
 
 	<div>
 		<h1 class="text-4xl font-thin text-primary-light mt-8 text-center">About Us</h1>
-		<p class="mx-12 my-12">
+		<p class="mx-12 my-12 dark:text-white">
 			Your One-Stop Shop for Custom Gaming and Workstation PCs At [Company Name], we believe that
 			your computer should be a reflection of your unique needs and style. That's why we offer a
 			range of custom gaming and workstation PCs that are not only powerful, but also built to your
