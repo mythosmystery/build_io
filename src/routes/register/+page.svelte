@@ -11,37 +11,37 @@
 		type="text"
 		name="name"
 		placeholder="Name"
-		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800"
+		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white"
 	/>
 	<input
 		type="text"
 		name="username"
 		placeholder="Username"
-		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800"
+		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white"
 	/>
 	<input
 		type="text"
 		name="email"
 		placeholder="Email"
-		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800"
+		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white"
 	/>
 	<input
 		type="text"
 		name="phone"
 		placeholder="Phone Number"
-		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800"
+		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white"
 	/>
 	<input
 		type="password"
 		name="password"
 		placeholder="Password"
-		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 mt-4"
+		class="p-4 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white mt-4"
 	/>
 	<input
 		type="password"
 		name="passwordConfirm"
 		placeholder="Confirm Password"
-		class="p-4 rounded-lg mb-4 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800"
+		class="p-4 rounded-lg mb-4 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white"
 	/>
 	<button
 		type="submit"
