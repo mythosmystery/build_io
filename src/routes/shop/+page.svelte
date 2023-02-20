@@ -1,7 +1,16 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte'
+	import type { Product } from '$lib/models/product.model'
 	import type { PageData } from './$types'
+	import { getNotificationsContext } from 'svelte-notifications'
+	import { notImplementedNotification } from '$lib/helpers'
 	export let data: PageData
+
+	const { addNotification } = getNotificationsContext()
+
+	async function addToCart(product: Product) {
+		notImplementedNotification(addNotification)
+	}
 </script>
 
 <h1 class="text-center text-3xl font-thin text-primary-light my-12">Shop our computers</h1>
@@ -24,7 +33,11 @@
 						currency: 'USD'
 					})}
 				</p>
-				<button class="hover:text-primary-light text-primary" title="Add to cart">
+				<button
+					on:click={async () => await addToCart(product)}
+					class="hover:text-primary-light text-primary"
+					title="Add to cart"
+				>
 					<Icon
 						icon="mdi:cart-plus"
 						class="w-8 h-8 mt-4 hover:scale-110 active:scale-90 transition-all ease-in"

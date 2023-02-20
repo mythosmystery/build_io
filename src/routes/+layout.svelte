@@ -24,7 +24,6 @@
 </svelte:head>
 
 <Notifications>
-	<!-- <div class="dark:bg-slate-700 min-h-screen"> -->
 	<div
 		class={'transition-all ease-in-out ' +
 			($state.darkMode ? 'dark bg-slate-700 min-h-screen' : '')}
