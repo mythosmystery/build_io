@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from '$app/forms'
 	import type { ActionData } from './$types'
 
 	export let form: ActionData
@@ -6,7 +7,7 @@
 
 <h1 class="text-4xl font-thin mt-12 mb-12 text-center dark:text-primary-light">Register</h1>
 
-<form method="post" class="flex flex-col gap-2 w-3/4 lg:w-1/4 mx-auto pb-24">
+<form method="post" use:enhance class="flex flex-col gap-2 w-3/4 lg:w-1/4 mx-auto pb-24">
 	<input
 		type="text"
 		name="name"

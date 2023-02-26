@@ -1,25 +1,64 @@
 <script lang="ts">
 	import { redirect } from '@sveltejs/kit'
 	import { formatPhone, notImplementedNotification } from '$lib/helpers'
-	import type { PageData } from './$types'
+	import type { ActionData, PageData } from './$types'
 	import Icon from '@iconify/svelte'
 	import { getNotificationsContext } from 'svelte-notifications'
+	import { enhance } from '$app/forms'
 
 	const { addNotification } = getNotificationsContext()
 
 	export let data: PageData
+	export let form: ActionData
+
+	$: addresses = data.user?.expand?.addresses
 
 	let showAddressForm = false
 
 	if (!data.user) {
 		throw redirect(303, '/login')
 	}
+
+	async function deleteAddress(id: string) {
+		const formData = new FormData()
+		formData.append('id', id)
+
+		const res = await fetch(`?/deleteAddress`, {
+			method: 'POST',
+			body: formData
+		})
+
+		if (res.ok) {
+			addNotification({
+				text: 'Your address has been deleted.',
+				type: 'success',
+				position: 'top-right',
+				removeAfter: 3000
+			})
+			if (addresses) addresses = addresses.filter((address) => address.id !== id)
+		} else {
+			addNotification({
+				text: 'There was an error deleting your address.',
+				type: 'error',
+				position: 'top-right',
+				removeAfter: 3000
+			})
+		}
+	}
 </script>
 
-<div class="flex justify-around gap-8 mt-12 dark:text-white">
+<div class="flex justify-around gap-8 mt-12 pb-12 dark:text-white">
 	<div class="flex flex-col-reverse gap-8">
 		{#if showAddressForm}
-			<form method="post" action="?/addAddress" class="shadow-md flex flex-col p-4 mb-12">
+			<form
+				method="post"
+				action="?/addAddress"
+				use:enhance
+				on:submit={() => {
+					showAddressForm = false
+				}}
+				class="shadow-md flex flex-col p-4 mb-12"
+			>
 				<input
 					type="text"
 					name="nickname"
@@ -113,8 +152,10 @@
 					class="p-2 rounded-lg mb-2 focus:outline-none focus:ring focus:ring-primary-light bg-gray-100 dark:bg-slate-800 dark:text-white"
 					placeholder="Notes (Optional)"
 				/>
-				<button type="submit" class="p-2 rounded-lg bg-primary-light text-white">Add Address</button
-				>
+				<button class="p-2 rounded-lg bg-primary-light text-white">Add Address</button>
+				{#if form?.error}
+					<p class="text-red-500">Error adding address</p>
+				{/if}
 			</form>
 		{/if}
 		<div class="py-8 px-20 rounded-md shadow-md">
@@ -122,11 +163,11 @@
 			<p class="text-xl italic">{data.user?.name} ({data.user?.username})</p>
 			<p class="text-lg italic">{data.user?.email}</p>
 			<p class="italic">{formatPhone(data.user?.phone)}</p>
-			{#if !data.user?.expand?.addresses?.length}
+			{#if !addresses?.length}
 				<p class="text-xl italic">No addresses</p>
 			{:else}
 				<div class="flex flex-col">
-					{#each data.user?.expand?.addresses as address, i}
+					{#each addresses as address, i}
 						<div class="flex hover:bg-gray-100 p-3 mt-2 dark:hover:bg-slate-600">
 							<ul class="pr-10">
 								<li class="text-lg italic">{address.nickname}</li>
@@ -136,7 +177,7 @@
 							</ul>
 							{#if i > 0}
 								<button
-									on:click={() => notImplementedNotification(addNotification)}
+									on:click={() => deleteAddress(address.id)}
 									class="text-red-400 m-4 hover:text-red-600"
 								>
 									<Icon icon="carbon:delete" height="24" />

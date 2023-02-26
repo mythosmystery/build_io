@@ -1,13 +1,14 @@
 <script lang="ts">
 	import type { ActionData } from './$types'
 	import PocketBase from 'pocketbase'
+	import { enhance } from '$app/forms'
 
 	export let form: ActionData
 </script>
 
 <h1 class="text-4xl font-thin my-24 text-center dark:text-primary-light">Login</h1>
 
-<form method="post" class="flex flex-col w-3/4 lg:w-1/4 mx-auto">
+<form method="post" use:enhance class="flex flex-col w-3/4 lg:w-1/4 mx-auto">
 	<input
 		type="text"
 		name="username"

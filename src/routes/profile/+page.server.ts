@@ -1,6 +1,6 @@
 import { fromFormData, serialize } from '$lib';
 import type { User } from '$lib/models/user.model';
-import { redirect } from '@sveltejs/kit';
+import { json, redirect } from '@sveltejs/kit';
 import type { Address } from '$lib/models/address.model';
 import type { Actions, PageServerLoad } from './$types';
 
@@ -42,6 +42,19 @@ export const actions = {
         } catch (e: any) {
             return { error: e.message }
         }
-        throw redirect(302, '/profile')
+        return { success: true }
     },
+    deleteAddress: async ({ request, locals: { pb, user } }) => {
+        if (!user) throw new Error('User not found')
+
+        const { id } = await fromFormData<{ id: string }>(request)
+        try {
+            await pb.collection('addresses').delete(id)
+            await pb.collection('users').update<User>(user.id, { addresses: user.addresses.filter(a => a !== id) }, {expand: 'addresses'})
+            return { success: true }
+        } catch(e: any) {
+            console.error(e)
+            return { error: e.message }
+        }
+    }
 } satisfies Actions
