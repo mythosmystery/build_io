@@ -1,14 +1,14 @@
-version: "3.8"
+version: '3.8'
 
 services:
   client:
     container_name: client
-    build: 
+    build:
       dockerfile: ./Dockerfile
     networks:
       - pocketnet
     ports:
-      - "5173:3000"
+      - '5173:3000'
     depends_on:
       - pocketbase
     environment:
@@ -16,14 +16,14 @@ services:
 
   pocketbase:
     container_name: pocketbase
-    build: 
+    build:
       dockerfile: ./pocketbase/Dockerfile
     networks:
       - pocketnet
     volumes:
       - ./pb_data:/pb/pb_data
     ports:
-      - "8090:8080"
+      - '8090:8080'
 
 networks:
   pocketnet:

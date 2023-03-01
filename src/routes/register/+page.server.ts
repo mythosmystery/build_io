@@ -23,5 +23,3 @@ export const actions = {
 		throw redirect(302, '/login')
 	}
 } satisfies Actions
-
-

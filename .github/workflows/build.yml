@@ -1,14 +1,11 @@
 name: Build
 
-
 # This workflow is triggered on pushes to main and pull requests to any branch.
 on:
   pull_request:
 
 jobs:
-
   check-pocketbase:
-
     runs-on: self-hosted
 
     steps:
@@ -16,36 +13,32 @@ jobs:
         run: ping -c 3 pb.mythosmystery.ga
 
   unit-test:
-      
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-      needs: check-pocketbase
-  
-      steps:
-        - uses: actions/checkout@v3
-        - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v3
-          with:
-            node-version: '16.x'
-            cache: 'yarn'
-        - run: yarn
-        - run: yarn test:unit
+    needs: check-pocketbase
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+      - run: yarn
+      - run: yarn test:unit
 
   e2e-test:
-        
-        runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-        needs: check-pocketbase
-    
-        steps:
-          - uses: actions/checkout@v3
-          - name: Use Node.js ${{ matrix.node-version }}
-            uses: actions/setup-node@v3
-            with:
-              node-version: '16.x'
-              cache: 'yarn'
-          - run: yarn
-          - run: npx playwright install --with-deps
-          - run: yarn test
+    needs: check-pocketbase
 
-
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+      - run: yarn
+      - run: npx playwright install --with-deps
+      - run: yarn test
