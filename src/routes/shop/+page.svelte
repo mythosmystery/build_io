@@ -8,7 +8,7 @@
 
 	const { addNotification } = getNotificationsContext()
 
-	async function addToCart(product: Product) {
+	async function addToCart(productId: string) {
 		notImplementedNotification(addNotification)
 	}
 </script>
@@ -34,7 +34,7 @@
 					})}
 				</p>
 				<button
-					on:click={async () => await addToCart(product)}
+					on:click={async () => await addToCart(product.id)}
 					class="hover:text-primary-light text-primary"
 					title="Add to cart"
 				>
